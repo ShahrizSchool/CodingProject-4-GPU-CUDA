@@ -37,7 +37,7 @@ int main(void)
   add<<<1, 1>>>(N, x, y);
 
   //waiting for host
-  cudaDeviceSynhronize();
+  cudaDeviceSynchronize();
 
   // Check for errors (all values should be 3.0f)
   float maxError = 0.0f;
