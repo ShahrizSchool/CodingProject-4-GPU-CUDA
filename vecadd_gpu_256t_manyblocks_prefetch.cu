@@ -28,7 +28,7 @@ int main(void)
     x[i] = 1.0f;
     y[i] = 2.0f;
   }
-
+  int deviceID = 0; 
   cudaMemPrefetchAsync((void *)x, N*sizeof(float), deviceID);
   cudaMemPrefetchAsync((void *)y, N*sizeof(float), deviceID);
 
